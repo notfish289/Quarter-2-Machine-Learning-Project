@@ -1,10 +1,10 @@
-Clustered Decision Trees
+**Clustered Decision Trees**
 
-Overview
+**Overview**
 
 This repository contains the code, dataset, and report for our research on Clustered Decision Trees (CDTs), a novel decision tree splitting heuristic that incorporates K-means clustering to improve classification performance. Traditional heuristics like information gain and Gini impurity act greedily, considering only the immediate next split. Our approach leverages clustering to account for the future purity of splits, leading to better performance on complex, unbalanced datasets.
 
-Repository Structure
+**Repository Structure**
 
 main.py - Contains the implementation of Clustered Decision Trees.
 
@@ -12,11 +12,11 @@ credit_card.csv - Includes the original dataset, as well as processed training a
 
 Project Report.pdf - Full research paper detailing the methodology, experiments, and results.
 
-Methodology
+**Methodology**
 
 The ClusteredInfo heuristic modifies the traditional entropy formula by incorporating K-means clustering. By first clustering the data before calculating entropy, this method considers the future predictive power of each split, rather than just its immediate impact.
 
-Dataset
+**Dataset**
 
 We tested our approach on a highly imbalanced credit card fraud dataset with 30 continuous attributes. After preprocessing:
 
@@ -26,11 +26,11 @@ Each attribute was discretized into 3 bins to enable decision tree splitting whi
 
 An 80-20 split was used for training and testing.
 
-Results
+**Results**
 
 We compared Clustered Decision Trees (CDTs) with a regular decision tree using Scikit-learn. Performance was evaluated using sensitivity (true positive rate), crucial in fraud detection.
 
-Model
+**Model**
 
 Sensitivity (Test Set)
 
@@ -44,7 +44,7 @@ Regular Decision Tree
 
 CDTs significantly improved performance, especially on the minority class, demonstrating the effectiveness of non-greedy splitting in unbalanced datasets.
 
-Future Work
+**Future Work**
 
 Testing on additional datasets with different distributions.
 
@@ -52,8 +52,6 @@ Optimizing K-means clustering parameters dynamically.
 
 Exploring extensions beyond binary classification.
 
-Authors & Contributions
+**Authors & Contributions**
 
 Abhinav Palikala and Justin Lee - Developed the CDT algorithm, conducted experiments, and wrote the report.
-
-Teammates - Contributions to preprocessing, evaluation, and documentation.
